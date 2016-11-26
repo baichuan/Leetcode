@@ -1,3 +1,16 @@
+# follow-up question to consider time complexity 
+
+# 考虑最差情况，full binary tree， 用depth = 3 来考虑，叶节点的个数就是2^(depth - 1)
+#       1
+#   2      3. 
+# 4   5  6   7 
+
+# 所以有2^(depth-1)个path, 每个path 要print depth 个
+# 所以depth * 2^(depth-1) 算big O 的话就是depth * 2^depth
+# depth 是O(logn)，n是树种node的个数
+# O(2^logn) = O(n)
+# 所以O(nlogn)
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
